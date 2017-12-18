@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>정보올림피아트 문제 풀이</title>
+</head>
+<body>
+	<h3>529: 출력 - 자가진다 1</h3><br/>
+	<h5>“몸무게+100-키”를 비만수치 공식이라고 하자.
+		키와 몸무게를 자연수로 입력받아 첫 번째 줄에 비만수치를 출력하고, 비만수치가 0보다 크면 다음줄에 비만("Obesity")이라는 메시지를 출력하는 프로그램을 작성하시오. (출력형식은 아래 출력 예를 참고하세요.)</h5>
+	<h6>입력 예 : </h6><br/>
+	<h6>155 60</h6>
+	<h6>출력 예 : </h6><br/>
+	<h6>5<br/>Obsity</h6>
+
+
+	<h2>풀이 ---------------------------------------------------------</h2>
+	<!=========== 문제 풀기 ===========>
+
+
+	<!-- 입력부 -->
+	키 : <input type="text" id="height"/><p/>
+	몸무게 : <input type="text" id="weight"/><p/>
+	<button onclick="solve529()">출력</button>
+
+	<!-- 출력부 -->
+	<p id="result529"></p>
+	<p id="result529-1"></p>
+	<p id="result529-2"></p>
+	<script>
+		//javascript 작성
+		var ob = "obesity";
+		function solve529(){
+			// 사용자가 입력한 키 data 를 받아오기 
+			var hei = document.getElementById('height').value;
+			var wei = document.getElementById('weight').value;
+			var bmi = Number(wei)+100-Number(hei);
+
+			//console.log(bmi);
+
+			//result529 id 값을 가진 태그에 키 데이터를 보여주기
+				if(bmi > 0){
+				document.getElementById('result529').innerHTML = bmi;				
+				document.getElementById('result529-1').innerHTML = ob;
+				}
+				else{
+					document.getElementById('result529-2').innerHTML = bmi;
+				}
+			//출력 데이터
+			
+		}
+	</script>
+
+<hr/><!-- 문제 구분 하는 hr 태그 -->
+
+
+
+</body>
+</html>

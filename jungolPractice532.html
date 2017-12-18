@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>정보올림피아트 문제 풀이</title>
+</head>
+<body>
+	<h3>532: 출력 - 자가진단 1</h3><br/>
+	<h5>두 개의 실수를 입력받아 모두 4.0 이상이면 "A", 모두 3.0 이상이면 "B", 아니면 "C" 라고 출력하는 프로그램을 작성하시오.</h5>
+	<h6>입력 예 : 4.3 3.5</h6><p/>
+	<h6>B</h6>
+	<h6>입력 예 : 4.0 2.5</h6><p/>
+	<h6>C</h6>
+
+	<h2>풀이 ---------------------------------------------------------</h2>
+	<!=========== 문제 풀기 ===========>
+
+
+	<!-- 입력부 -->
+	학점1 : <input type="text" id="credit1"/><p/>
+	학점2 : <input type="text" id="credit2"/><p/>
+
+
+		<button onclick="solve532()">출력</button>
+
+	<!-- 출력부 -->
+	<p id="result532"></p>
+	
+	<script>
+		//javascript 작성
+
+		function solve532(){
+			// 사용자가 입력한 키 data 를 받아오기 
+			var credit1 = document.getElementById('credit1').value;
+			var credit2 = document.getElementById('credit2').value;
+			var A;
+			console.log(A);
+
+
+
+			if(credit1 >= 4.0 && credit2 >= 4.0){
+				A = "A"; 
+			} else if(credit1 >= 3.0 && credit2 >= 3.0){
+				A = "B";
+			} else{
+				A = "C";
+			}
+				document.getElementById('result532').innerHTML = A;
+			}
+	</script>
+
+<hr/><!-- 문제 구분 하는 hr 태그 -->
+
+</body>
+</html>

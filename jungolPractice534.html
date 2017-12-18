@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>정보올림피아트 문제 풀이</title>
+</head>
+<body>
+	<h3>534: 선택제어문 - 자가진단 7</h3><br/>
+	<h5>영문 대문자를 입력받아<p/> 
+
+	'A'이면 “Excellent”,<p/> 
+
+	'B'이면 “Good”,<p/> 
+
+	'C'이면 “Usually”,<p/>
+
+	'D'이면 “Effort”,<p/> 
+
+	'F'이면 “Failure”,<p/>
+
+	그 외 문자이면 “error” 라고 출력하는 프로그램을 작성하시오.
+
+</h5>
+	<h6>입력 예 : B </h6><p/>
+	<h6>Good</h6>
+
+
+	<h2>풀이 ---------------------------------------------------------</h2>
+	<!=========== 문제 풀기 ===========>
+
+
+	<!-- 입력부 -->
+	영어 : <input type="text" id="English"/><p/>
+
+
+
+		<button onclick="solve534()">출력</button>
+
+	<!-- 출력부 -->
+	<p id="result534"></p>
+	
+	<script>
+		//javascript 작성
+
+		function solve534(){
+
+			var English = document.getElementById('English').value;
+		
+			var A = "Excellent";
+			var B = "Good";
+			var C = "Usually";
+			var D = "Effort";
+			var F = "Failure";
+			var data;
+
+
+			if(English == "A"){
+				data = A;
+			}else if(English == "B"){
+				data = B;
+			}else if(English == "C"){
+				data = C;
+			
+			}else if(English == "D"){
+				data = D;
+			}else if(English == "F"){
+				data = F;
+			}else{
+				data = "error";
+			}
+				document.getElementById('result534').innerHTML = data;
+			}
+
+	</script>
+
+<hr/><!-- 문제 구분 하는 hr 태그 -->
+
+</body>
+</html>

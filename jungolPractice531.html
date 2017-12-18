@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>정보올림피아트 문제 풀이</title>
+</head>
+<body>
+	<h3>531: 선택제어문 - 자가진단 8</h3><br/>
+	<h5>복싱체급은 몸무게가 50.80kg 이하를 Flyweight 61.23kg 이하를 Lightweight, 72.57kg 이하를 Middleweight, 88.45kg 이하를 Cruiserweight, 88.45kg 초과를 Heavyweight라고 하자.<p/>
+
+몸무게를 입력받아 체급을 출력하는 프로그램을 작성하시오.
+</h5><p/>
+ 
+	<h6>입력 : 87.3</h6><p/>
+	<h6>출력 : Cruiserweight</h6>
+
+
+	<h2>풀이 ---------------------------------------------------------</h2>
+	<!=========== 문제 풀기 ===========>
+
+
+	<!-- 입력부 -->
+	몸무게 <input type="text" id="Kg"/>Kg<p/>
+
+
+		<button onclick="solve531()">출력</button>
+
+	<!-- 출력부 -->
+	<p id="result531"></p>
+	
+	<script>
+		//javascript 작성
+
+		function solve531(){
+			// 입력받은 데이터
+			var kg = document.getElementById('Kg').value;
+			console.log(kg);
+
+			// 기존 데이터를 다 변수로 설정
+			var FLY_WEIGHT = 50.80;
+			var LIGHT_WEIGHT = 61.23;
+			var MIDDLE_WEIGHT  = 72.57;
+			var CRUISER_WEIGHT  = 88.45;
+
+			var FLY_WEIGHT_STR = "Flyweight";
+			var LIGHT_WEIGHT_STR = "Lightweight";
+			var MIDDLE_WEIGHT_STR = "Middleweight";
+			var CRUISER_WEIGHT_STR = "Cruiserweight";
+			var HEAVY_WEIGHT_STR = "heavyweight";
+			var ERROR_STR = "Error";
+			
+			var outputID = "result531";
+
+
+			if(kg <= FLY_WEIGHT) {
+				document.getElementById(outputID).innerHTML = FLY_WEIGHT_STR;
+			} else if (kg <= LIGHT_WEIGHT && kg > FLY_WEIGHT) {
+			 	document.getElementById(outputID).innerHTML = LIGHT_WEIGHT_STR;
+			} else if (kg <= MIDDLE_WEIGHT && kg > LIGHT_WEIGHT) {
+				document.getElementById(outputID).innerHTML = MIDDLE_WEIGHT_STR;
+			} else if (kg <= CRUISER_WEIGHT && kg > MIDDLE_WEIGHT) {
+				document.getElementById(outputID).innerHTML = CRUISER_WEIGHT_STR;
+			} else if (kg > CRUISER_WEIGHT){
+				document.getElementById(outputID).innerHTML = HEAVY_WEIGHT_STR;
+			} else{
+				document.getElementById(outputID).innerHTML = ERROR_STR;
+			}
+		}
+
+	
+
+		
+
+	</script>
+
+<hr/><!-- 문제 구분 하는 hr 태그 -->
+
+</body>
+</html>

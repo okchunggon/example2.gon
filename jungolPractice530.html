@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>정보올림피아트 문제 풀이</title>
+</head>
+<body>
+	<h3>530: 출력 - 자가진단 1</h3><br/>
+	<h5>나이를 입력받아 20살 이상이면 "adult"라고 출력하고 그렇지 않으면 몇 년후에 성인이 되는지를 "○ years later"라는 메시지를 출력하는 프로그램을 작성하시오.</h5>
+	<h6>입력 예 : </h6><p/>
+	<h6>18</h6>
+	<h6>2 years later </h6>
+
+
+
+	<h2>풀이 ---------------------------------------------------------</h2>
+	<!=========== 문제 풀기 ===========>
+
+
+	<!-- 입력부 -->
+	나이 : <input type="text" id="years-Old"/><p/>
+	<button onclick="solve530()">출력</button>
+
+	<!-- 출력부 -->
+	<p id="result530"></p>
+	
+	<script>
+		//javascript 작성
+
+		function solve530(){
+			// 사용자가 입력한 키 data 를 받아오기 
+			var old = document.getElementById('years-Old').value;
+			var ad = "adult";
+			var masege = 20-Number(old)+"years later";
+
+			//result530 id 값을 가진 태그에 키 데이터를 보여주기
+				if(old >= 20){
+					document.getElementById('result530').innerHTML = ad;
+				}
+				else{
+					document.getElementById('result530').innerHTML = masege;
+				}
+			}
+			
+	</script>
+
+<hr/><!-- 문제 구분 하는 hr 태그 -->
+
+</body>
+</html>

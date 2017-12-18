@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>정보올림피아트 문제 풀이</title>
+</head>
+<body>
+	<h3>534: 선택제어문 - 형성평가 3</h3><br/>
+	<h5>년도를 입력받아 윤년(leap year)인지 평년(common year)인지 판단하는 프로그램을 작성하시오.<p/> 
+
+
+</h5>
+	<h6>입력 2088</h6><p/>
+	<h6>leap year</h6>
+
+
+	<h2>풀이 ---------------------------------------------------------</h2>
+	<!=========== 문제 풀기 ===========>
+
+
+	<!-- 입력부 -->
+	년도 : <input type="text" id="year"/><p/>
+
+
+		<button onclick="solve122()">출력</button>
+
+	<!-- 출력부 -->
+	<p id="result122"></p>
+	
+	<script>
+		//javascript 작성
+
+		function solve122(){
+
+			var yr = document.getElementById('year').value;
+			console.log(yr);
+			var ly = "leap year";
+			var cy = "common year";
+			var data;
+
+
+
+
+			if(Number(yr) % 400 == 0){
+				data = ly;
+			}
+			else if(Number(yr) % 4 == 0 && Number(yr) % 100 != 0){
+				data = ly;
+			}else{
+				data = cy;
+			}
+				document.getElementById('result122').innerHTML = data;
+			}
+		
+			
+
+	</script>
+
+<hr/><!-- 문제 구분 하는 hr 태그 -->
+
+</body>
+</html>
